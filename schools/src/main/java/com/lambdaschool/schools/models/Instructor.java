@@ -3,6 +3,7 @@ package com.lambdaschool.schools.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class Instructor
      * The Instructor's name (String)
      */
     @Column(nullable = false)
+    @NotEmpty(message = "You must include a 'name'")
     private String name;
 
     /**
